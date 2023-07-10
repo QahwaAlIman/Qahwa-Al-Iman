@@ -59,8 +59,13 @@
       gap: 20px;
     }
 
+    .menu > div {
+      flex-basis: calc(33.33% - 40px);
+    }
+
     .menu-item {
       width: 300px;
+      height: 420px;
       margin: 20px;
       padding: 20px;
       background-color: #fff;
@@ -68,12 +73,11 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      justify-content: space-between;
     }
 
     .menu-item h3 {
-      color: #000;
+      color: #fff;
       font-size: 18px;
       margin-bottom: 10px;
     }
@@ -82,17 +86,17 @@
       color: #000;
       font-size: 14px;
     }
-    
-    @media only screen and (max-width: 600px) {
-      .menu {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .menu-item {
-        width: auto;
-        margin: 10px;
-      }
+
+    .menu-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .menu-item .price {
+      color: #555;
+      font-size: 14px;
     }
 
     .footer {
@@ -103,6 +107,24 @@
       bottom: 0;
       left: 0;
       width: 100%;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 900px) {
+      .menu > div {
+        flex-basis: calc(50% - 40px);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .menu {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu > div {
+        flex-basis: 100%;
+      }
     }
 
   </style>
@@ -119,34 +141,98 @@
     <a href="about">Over Ons</a>
     <a href="contact">Contact</a>
   </nav>
-
   <div class="container">
     <div class="intro">
       <h1>Welkom bij onze Islamitische Koffiebar!</h1>
-      <p style="color: #fff;">Geniet van heerlijke koffie terwijl je de essentie van de islamitische cultuur en erfgoed ervaart.</p>
-      <p style="color: #fff;">Wij bieden ook een selectie van heerlijke taarten en lekkernijen om te genieten bij onze koffie:</p>
     </div>
 
     <div class="menu">
-      <div class="menu-item">
-        <h3>Arabische Koffie</h3>
-        <img src="Arabische Koffie.jpg" alt="Arabische Koffie" width="200">
-        <p>Ontdek de rijke smaken van traditionele Arabische koffie gemaakt met premium Arabica bonen.</p>
-        <p class="price">€3,50</p>
+      <div>
+        <h3>Koffie</h3>
+        <ul>
+          <li>
+            <div class="menu-item">
+              <img src="Arabische Koffie.jpg" alt="Arabische Koffie">
+              <h4>Arabische Koffie</h4>
+              <p>Ontdek de rijke smaken van traditionele Arabische koffie gemaakt met premium Arabica bonen.</p>
+              <p class="price">€3,50</p>
+            </div>
+          </li>
+          <li>
+            <div class="menu-item">
+              <img src="Turkse Koffie.jpg" alt="Turkse Koffie">
+              <h4>Turkse Koffie</h4>
+              <p>Ervaar het unieke brouwproces en intense smaken van authentieke Turkse koffie.</p>
+              <p class="price">€3,00</p>
+            </div>
+          </li>
+          <li>
+            <div class="menu-item">
+              <img src="Espresso.jpg" alt="Espresso">
+              <h4>Espresso</h4>
+              <p>Een geconcentreerde koffiedrank gebrouwen door een kleine hoeveelheid bijna kokend water onder druk door fijngemalen koffiebonen te persen.</p>
+              <p class="price">€2,50</p>
+            </div>
+          </li>
+        </ul>
       </div>
-
-      <div class="menu-item">
-        <h3>Turkse Koffie</h3>
-        <img src="Turkse Koffie.jpg" alt="Turkse Koffie" width="200">
-        <p>Ervaar het unieke brouwproces en intense smaken van authentieke Turkse koffie.</p>
-        <p class="price">€3,00</p>
+      <div>
+        <h3>Thee</h3>
+        <ul>
+          <li>
+            <div class="menu-item">
+              <img src="Marokkaanse Muntthee.jpg" alt="Marokkaanse Muntthee">
+              <h4>Marokkaanse Muntthee</h4>
+              <p>Geniet van de verfrissende smaak van Marokkaanse muntthee, een klassieke mix van groene thee en verse muntblaadjes.</p>
+              <p class="price">€2,00</p>
+            </div>
+          </li>
+          <li>
+            <div class="menu-item">
+              <img src="Chai Thee.jpg" alt="Chai Thee">
+              <h4>Chai Thee</h4>
+              <p>Een aromatische en gekruide theemelange afkomstig uit het Indiase subcontinent.</p>
+              <p class="price">€2,50</p>
+            </div>
+          </li>
+          <li>
+            <div class="menu-item">
+              <img src="Earl Grey.jpg" alt="Earl Grey">
+              <h4>Earl Grey</h4>
+              <p>Een zwarte theemelange op smaak gebracht met olie van de schil van de bergamotvrucht.</p>
+              <p class="price">€2,00</p>
+            </div>
+          </li>
+        </ul>
       </div>
-
-      <div class="menu-item">
-        <h3>Marokkaanse Muntthee</h3>
-        <img src="Marokkaanse Muntthee.jpg" alt="Marokkaanse Muntthee" width="200">
-        <p>Geniet van de verfrissende smaak van Marokkaanse muntthee, een klassieke mix van groene thee en verse muntblaadjes.</p>
-        <p class="price">€2,00</p>
+      <div>
+        <h4>Snacks</h3>
+        <ul>
+          <li>
+            <div class="menu-item">
+              <img src="Baklava.jpg" alt="Baklava">
+              <h4>Baklava</h4>
+              <p>Een zoet gebak gemaakt van lagen filodeeg gevuld met gehakte noten en gezoet met siroop of honing.</p>
+              <p class="price">€2,50</p>
+            </div>
+          </li>
+          <li>
+            <div class="menu-item">
+              <img src="Maamoul.jpg" alt="Maamoul">
+              <h4>Maamoul</h4>
+              <p>Een gevuld Midden-Oosters gebak of koekje gemaakt met dadels, noten of andere vullingen.</p>
+              <p class="price">€2,00</p>
+            </div>
+          </li>
+          <li>
+            <div class="menu-item">
+              <img src="Amandelkoekjes.jpg" alt="Amandelkoekjes">
+              <h4>Amandelkoekjes</h4>
+              <p>Heerlijke koekjes gemaakt met amandelmeel en gegarneerd met hele amandelen.</p>
+              <p class="price">€1,50</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -157,4 +243,5 @@
 </body>
 
 </html>
+
 
