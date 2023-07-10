@@ -53,10 +53,10 @@
     }
 
     .menu {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
-      justify-items: center;
     }
 
     .menu-item {
@@ -70,10 +70,13 @@
 
     .menu-item h3 {
       color: #000;
+      font-size: 18px;
+      margin-bottom: 10px;
     }
 
     .menu-item p {
       color: #000;
+      font-size: 14px;
     }
 
     .footer {
@@ -131,4 +134,5 @@
 </body>
 
 </html>
+
 
