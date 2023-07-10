@@ -123,9 +123,16 @@
       }
 
       .menu > div {
-        flex-basis: 100%;
-        max-width: 100%;
+        flex-basis: calc(33.33% - 26.66px);
+        max-width: calc(33.33% - 26.66px);
       }
+    }
+    
+    /* Additional Styles */
+    .menu > div > h3 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
     }
 
   </style>
@@ -195,7 +202,8 @@
           <p class="price">€2,00</p>
         </div>
       </div>
-<div>
+
+      <div>
         <h3>Snacks</h3>
         <div class="menu-item">
           <img src="Baklava.jpg" alt="Baklava">
