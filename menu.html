@@ -53,14 +53,12 @@
     }
 
     .menu {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
 
     .menu-item {
-      width: 300px;
-      margin: 20px;
       padding: 20px;
       background-color: #fff;
       border-radius: 5px;
@@ -192,7 +190,7 @@
     </div>
   </div>
 
- <footer class="footer">
+  <footer class="footer">
     <p>&copy; 2023 Islamitische Koffiebar. Alle rechten voorbehouden.</p>
   </footer>
 </body>
